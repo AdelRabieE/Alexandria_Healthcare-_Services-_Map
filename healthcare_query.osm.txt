@@ -1,0 +1,23 @@
+[out:json][timeout:25];
+{{geocodeArea:Alexandria
+}}->.searchArea;
+(
+  node["amenity"="hospital"](area.searchArea);
+  way["amenity"="hospital"](area.searchArea);
+  relation["amenity"="hospital"](area.searchArea);
+  
+  node["amenity"="pharmacy"](area.searchArea);
+  way["amenity"="pharmacy"](area.searchArea);
+  relation["amenity"="pharmacy"](area.searchArea);
+  
+  node["amenity"="clinic"](area.searchArea);
+  way["amenity"="clinic"](area.searchArea);
+  relation["amenity"="clinic"](area.searchArea);
+  
+  node["healthcare"](area.searchArea);
+  way["healthcare"](area.searchArea);
+  relation["healthcare"](area.searchArea);
+);
+out body;
+>;
+out skel qt;
